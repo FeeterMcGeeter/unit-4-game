@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Sura:400,700|Trade+Winds&display=swap');
+
+body {
+    background: url(../images/dark-paths.png)
+}
+
+/* Title Header */
+
+.container h1 {
+    color: #fff;;
+    font-family: 'Trade Winds', cursive;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+/* Instructions Container */
+
+#instructions {
+    background: #fff;
+}
+
+#instructions p {
+    color: #483D8B;
+    font-family: 'Sura', serif;
+    font-weight: bold;
+    padding-left: 2px;
+}
+
+/* Random Number & Win/Loss Row */
+
+#random-number {
+    background: #fff;
+}
+
+#win-loss {
+    background: #fff;
+}
+
+#win-loss p {
+    color: #483D8B;
+    font-weight: bold;
+    font-family: 'Sura', serif;
+    padding-left: 20px;
+}
+
+/* Images Row */
+
+#images .container {
+    padding-left: 0;
+}
+
+#images img  {
+    width: 100px;
+    height: 100px;
+}
+
+#images button {
+    background: transparent;
+    border: transparent;
+}
+
+/* Score Header */
+
+.score-header {
+    background: #fff;
+}
+
+.score-header p {
+    color: #483D8B;
+    font-family: 'Sura', serif;
+    font-weight: bold;
+    padding: 10px 0 10px 2px;
+    text-align: center;
+}
+
+/* User's Current Score */
+
+#user-score {
+    background: #fff;
+    width: 300px;
+    height: 200px;
+}
+
+#user-score p{
+    color: #483D8B;
+    font-size: 75px;
+}
