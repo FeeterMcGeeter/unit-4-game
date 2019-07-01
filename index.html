@@ -11,7 +11,7 @@
     </head>
     <body>
         <!-- Main Header -->
-        <div id="header" class="container mb-4">
+        <div id="header" class="container pl-0">
             <div class="row justify-content-start">
                 <div class="col-6">
                     <h1>Crystals Collector!</h1>
@@ -20,7 +20,7 @@
         </div>
 
         <!-- Instructions Container -->
-        <div id="instructions" class="container mb-4">
+        <div id="instructions" class="container">
             <p class="pt-4">You will be given a random number at the start of the game.</p>
             <p>There are four crystals below.  By clicking on a crystal, you will add a specific amount of points to your total score.</p>
             <p>You win the game by matching your total score to the random number, and you lose the game if your total score goes above the random number.</p>
@@ -28,30 +28,63 @@
             <p>Each time the game starts, the game will change the values of each crystal.</p>
             <p class="pb-4">Good Luck!!!</p>
         </div>
-        <div id="score-row" class="container mb-4">
+
+        <!-- Random Total and Win/Loss Counter -->
+        <div id="score-row" class="container">
             <div class="row justify-content-start">
                 <div id="random-number" class="col-3 mr-4">
 
                 </div>
                 <div id="win-loss" class="col-3">
-                    <p class="pt-3">Wins: </p>
-                    <p class="pb-3">Losses: </p>
+                    <div class="row">
+                        <p id="wins">Wins: </p>
+                        <p id="win-total"></p>
+                    </div>
+                    <div class="row">
+                        <p id="losses">Losses: </p>
+                        <p id="loss-total"></p>
+                    </div>
+                </div>
+                <div id="hidden-box" class="col-3">
+
                 </div>
             </div>
         </div>
-        <div id="images" class="row mb-4">
-            <div class="container">
-                <button><img src="assets/images/ltamethyst.png" alt="Light Amethyst"></button>
-                <button><img src="assets/images/emerald.jpg" alt="Emerald"></button>
-                <button><img src="assets/images/ruby.jpg" alt="Ruby"></button>
-                <button><img src="assets/images/bluezircon.jpg" alt="Blue Zircon"></button>
+
+        <!-- Crystal Image Buttons-->
+        <div id="images" class="container">
+            <div class="row justify-content-start">
+                <div class="col-2 p-0">
+                    <button><img src="assets/images/ltamethyst.png" id="ltamethyst" class="image" alt="Light Amethyst"></button>
+                </div>
+                <div class="col-2 p-0">
+                    <button><img src="assets/images/emerald.jpg" id="emerald" class="image" alt="Emerald"></button>
+                </div>
+                <div class="col-2 p-0">
+                    <button><img src="assets/images/ruby.jpg" id="ruby" class="image" alt="Ruby"></button>
+                </div>
+                <div class="col-2 p-0">
+                    <button><img src="assets/images/bluezircon.jpg" id="zircon" class="image" alt="Blue Zircon"></button>
+                </div>
             </div>
         </div>
-        <div class="container score-header col-4">
-            <p>Your total score is: </p>
+
+        <!-- Score Header -->
+        <div id="score-header" class="container">
+            <div class="row justify-content-start">
+                <div class="col-3">
+                    <p>Your total score is: </p>
+                </div>
+            </div>
         </div>
-        <div id="user-score" class="container mb-4">
-            <p>0</p>
+
+        <!-- User score total -->
+        <div id="score" class="container">
+            <div class="row justify-content-start">
+                <div id="user-score" class="col-3">
+                    
+                </div>
+            </div>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

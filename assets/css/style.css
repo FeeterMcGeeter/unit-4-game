@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Sura:400,700|Trade+Winds&display=swap');
 
 body {
-    background: url(../images/dark-paths.png)
+    background: url(../images/dark-paths.png);
 }
 
 /* Title Header */
 
+#header {
+    height: 75px;
+    margin: 0 0 5px 10px;
+
+}
+
 .container h1 {
     color: #fff;;
     font-family: 'Trade Winds', cursive;
-    padding-top: 40px;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 
@@ -17,6 +23,7 @@ body {
 
 #instructions {
     background: #fff;
+    margin: 0 0 5px 10px;
 }
 
 #instructions p {
@@ -28,22 +35,49 @@ body {
 
 /* Random Number & Win/Loss Row */
 
+#score-row {
+    margin: 0 0 10px 10px;
+}
+
 #random-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #fff;
+    color: #483D8B;
+    font-size: 75px;
+    height: 150px;
 }
 
 #win-loss {
     background: #fff;
+    height: 150px;
 }
 
 #win-loss p {
     color: #483D8B;
+    font-size: 25px;
     font-weight: bold;
     font-family: 'Sura', serif;
-    padding-left: 20px;
+    padding: 20px 0 10px 10px;
+    margin-right: 20px;
+}
+
+#wins {
+    margin-bottom: 0;
+}
+
+#hidden-box {
+    color: #483D8B;
+    background: #fff;
+    display: none;
 }
 
 /* Images Row */
+
+#images {
+    margin: 0 0 10px 10px;
+}
 
 #images .container {
     padding-left: 0;
@@ -61,27 +95,36 @@ body {
 
 /* Score Header */
 
-.score-header {
-    background: #fff;
+#score-header {
+    margin: 0 0 10px 10px;
+    padding-left: 0;
+    height: 45px;
 }
 
-.score-header p {
+#score-header .row {
+    height: 45px;
+}
+
+#score-header p {
     color: #483D8B;
+    background: #fff;
     font-family: 'Sura', serif;
     font-weight: bold;
-    padding: 10px 0 10px 2px;
-    text-align: center;
+    height: 45px;
+    padding: 10px 0 10px 10px;
 }
 
 /* User's Current Score */
 
-#user-score {
-    background: #fff;
-    width: 300px;
-    height: 200px;
+#score {
+    margin: 0 0 10px 10px;
 }
 
-#user-score p{
+#user-score {
     color: #483D8B;
-    font-size: 75px;
+    background: #fff;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

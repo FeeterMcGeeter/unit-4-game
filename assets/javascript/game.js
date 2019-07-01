@@ -8,15 +8,62 @@
 // I want the winning or losing song to play when the user wins or loses
 // I want everything but the win/loss counter to reset after each completed game
 
-// ========== SETTING UP THE GLOBAL VARIABLES ==========
+$(document).ready(function() {                  // This will run once the document is ready
 
-var wins = 0;                       // Win counter 
-var losses = 0;                     // Loss counter
+    // ========== SETTING UP THE VARIABLES ==========
 
-var ranNumChosen = "";              // Random number chosen for the user to reach 
-var userScore = 0;                  // User's total score
+    var wins = 0;                               // Win counter 
+    var losses = 0;                             // Loss counter
+    var ranNumChosen = "";                      // Random number chosen for the user to reach 
+    var userScore = 0;                          // User's total score
 
-var amethyst = "";                  // These crystals will update the user's score every time a "crystal" button is pressed
-var emerald = "";                   // and also play a sound effect
-var ruby = "";
-var blueZircon = "";
+    // ===== RANDOM NUMBER GENERATES BETWEEN MIN AND MAX SET =====
+
+    function numberGenerated(min, max) {
+        return Math.floor(Math.random() * (max-min+1) + min);
+    }
+
+    // ===== ASSIGNING THE RANDOM NUMBER CHOSEN FOR THE GAME =====
+
+    function gamePlay() {
+        ranNumChosen = numberGenerated(19, 120);
+        userScore = 0;
+        var crystalArray = [$("#ltamethyst"), $("#emerald"), $("#ruby"), $("#zircon")];
+    
+        // ===== ASSIGNING A RANDOM NUMBER TO EACH CRYSTAL BUTTON
+
+        for (var i = 0; i < crystalArray.length; i++) {
+            crystalArray[i].attr("data-image-src", numberGenerated(1, 12));
+        };
+
+        // ===== DOM MANIPULATION =====
+
+        $("#random-number").html(ranNumChosen); // Displays the random number for the user to target
+        $("#wins").html("Wins: " + wins);                  // Displays the win total 
+        $("#losses").html("Losses: " + losses);              // Displays the loss total
+        $("#user-score").html(userScore);       // Displays the user's current score
+    }
+
+    gamePlay();                                 // Starts the game
+
+    $(".image").on("click", function() {        // Creates the button click function
+        userScore += parseInt($(this).attr("data-image-src"));
+        $("user-score").html(userScore);
+
+        if(userScore === ranNumChosen) {
+            wins++;
+
+            gamePlay();
+        } else if (userScore > ranNumChosen) {
+            losses++;
+
+            gamePlay();
+        }
+    })
+
+}) 
+
+
+
+
+
