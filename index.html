@@ -10,86 +10,81 @@
         <link href="assets/css/style.css" rel="stylesheet">
     </head>
     <body>
-        <!-- Main Header -->
-        <div id="header" class="container pl-0">
-            <div class="row justify-content-start">
-                <div class="col-md-6 col-sm-6">
+        <!-- Title Header -->
+        <div id="header" class="container mx-auto w-100 pl-0">
+            <div class="row text-center">
+                <div class="col">
                     <h1>Crystals Collector!</h1>
                 </div>
             </div>
         </div>
 
         <!-- Instructions Container -->
-        <div id="instructions" class="container col-md-10 col-sm-10">
-            <p class="pt-4">You will be given a random number at the start of the game.</p>
+        <div id="instructions" class="container text-center mx-auto col-md-10">
+            <p>You will be given a random number at the start of the game.</p>
             <p>There are four crystals below.  By clicking on a crystal, you will add a specific amount of points to your total score.</p>
             <p>You win the game by matching your total score to the random number, and you lose the game if your total score goes above the random number.</p>
             <p>The value of each crystal is hidden from you until you click on it.</p>
             <p>Each time the game starts, the game will change the values of each crystal.</p>
-            <p class="pb-4">Good Luck!!!</p>
+            <p>Good Luck!!!</p>
         </div>
 
         <!-- Random Total and Win/Loss Counter -->
-        <div id="score-row" class="container">
-            <div class="row justify-content-start">
+        <div id="score-row" class="container mx-auto">
+            <div class="row justify-content-around">
                 <div id="random-number" class="col-md-3 col-sm-3 mr-4">
-
+    
                 </div>
                 <div id="win-loss" class="col-md-3 col-sm-3">
-                    <div class="row">
+                    <div class="row text-center">
                         <p id="wins">Wins: </p>
-                        <p id="win-total"></p>
                     </div>
                     <div class="row">
                         <p id="losses">Losses: </p>
-                        <p id="loss-total"></p>
                     </div>
-                </div>
-                <div id="hidden-box" class="col-md-3 col-sm-3">
-
                 </div>
             </div>
         </div>
 
         <!-- Crystal Image Buttons-->
-        <div id="images" class="container">
-            <div class="row justify-content-start">
-                <div class="col-md-2 col-sm-2 p-0">
-                    <button><img src="assets/images/lightamethyst.png" id="ltamethyst" class="image" alt="Light Amethyst"></button>
-                </div>
-                <div class="col-md-2 col-sm-2 p-0">
-                    <button><img src="assets/images/emerald.png" id="emerald" class="image" alt="Emerald"></button>
-                </div>
-                <div class="col-md-2 col-sm-2 p-0">
-                    <button><img src="assets/images/ruby.png" id="ruby" class="image" alt="Ruby"></button>
-                </div>
-                <div class="col-md-2 col-sm-2 p-0">
-                    <button><img src="assets/images/bluezircon.png" id="zircon" class="image" alt="Blue Zircon"></button>
-                </div>
+        <div id="images" class="container mx-auto">
+            <div class="row justify-content-center  mx-auto">
+                <img src="assets/images/lightamethyst.png" id="ltamethyst" class="image" alt="Light Amethyst">
+                <img src="assets/images/emerald.png" id="emerald" class="image" alt="Emerald">
+                <img src="assets/images/ruby.png" id="ruby" class="image" alt="Ruby">
+                <img src="assets/images/bluezircon.png" id="zircon" class="image" alt="Blue Zircon">
             </div>
         </div>
 
         <!-- Score Header -->
-        <div id="score-header" class="container">
-            <div class="row justify-content-start">
-                <div class="col-md-3 col-sm-3">
-                    <p>Your total score is: </p>
-                </div>
+        <div id="score-header" class="container mx-auto">
+            <div class="row text-center justify-content-center">
+                <p class="col-md-3 col-sm-3">Your Score: </p>
             </div>
         </div>
 
         <!-- User score total -->
-        <div id="score" class="container">
-            <div class="row justify-content-start">
+        <div id="score" class="container mx-auto">
+            <div class="row justify-content-center">
                 <div id="user-score" class="col-md-3 col-sm-3">
                     
                 </div>
             </div>
         </div>
 
+        <audio class="audio" id="opening-audio" controls preload="none"> 
+            <source src="assets/audio/sonicopening.mp3" type="audio/mpeg">
+        </audio>
+
         <audio class="audio" id="win-audio" controls preload="none"> 
             <source src="assets/audio/winsound.wav" type="audio/mpeg">
         </audio>
+
+        <audio class="audio" id="lose-audio" controls preload="none"> 
+            <source src="assets/audio/gameover.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

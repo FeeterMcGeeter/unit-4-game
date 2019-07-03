@@ -29,7 +29,7 @@ $(document).ready(function() {                  // This will run once the docume
         ranNumChosen = numberGenerated(19, 120);
         userScore = 0;
         var crystalArray = [$("#ltamethyst"), $("#emerald"), $("#ruby"), $("#zircon")];
-    
+
         // ===== ASSIGNING A RANDOM NUMBER TO EACH CRYSTAL BUTTON
 
         for (var i = 0; i < crystalArray.length; i++) {
@@ -67,10 +67,12 @@ $(document).ready(function() {                  // This will run once the docume
         if(userScore === ranNumChosen) {
             
             wins++;
+            $("#win-audio").trigger("play");    // Triggers victory music 
             gamePlay();
         } else if (userScore > ranNumChosen) {
-            losses++;
 
+            losses++;
+            $("#lose-audio").trigger("play");   // Triggers loss music
             gamePlay();
         }
     })
