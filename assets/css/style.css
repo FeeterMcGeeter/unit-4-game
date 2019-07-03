@@ -9,12 +9,20 @@ body {
 #header {
     height: 75px;
     margin: 0 0 5px 10px;
+}
 
+#header .row {
+    height: 75px;
+}
+
+#header .col-6 {
+    height: 75px;
 }
 
 .container h1 {
     color: #fff;;
     font-family: 'Trade Winds', cursive;
+    height: 75px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -105,12 +113,17 @@ body {
     height: 45px;
 }
 
+#score-header .col-3 {
+    height: 45px;
+}
+
 #score-header p {
     color: #483D8B;
     background: #fff;
     font-family: 'Sura', serif;
     font-weight: bold;
     height: 45px;
+    width: 180px;
     padding: 10px 0 10px 10px;
 }
 

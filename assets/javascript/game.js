@@ -39,8 +39,8 @@ $(document).ready(function() {                  // This will run once the docume
         // ===== DOM MANIPULATION =====
 
         $("#random-number").html(ranNumChosen); // Displays the random number for the user to target
-        $("#wins").html("Wins: " + wins);                  // Displays the win total 
-        $("#losses").html("Losses: " + losses);              // Displays the loss total
+        $("#wins").html("Wins: " + wins);       // Displays the win total 
+        $("#losses").html("Losses: " + losses); // Displays the loss total
         $("#user-score").html(userScore);       // Displays the user's current score
     }
 
@@ -48,11 +48,25 @@ $(document).ready(function() {                  // This will run once the docume
 
     $(".image").on("click", function() {        // Creates the button click function
         userScore += parseInt($(this).attr("data-image-src"));
-        $("user-score").html(userScore);
+        $("#user-score").html(userScore);
 
+        // ===== AUDIO FOR THE BUTTON CLICKS =====
+
+        var purpleSound = new Audio("assets/audio/btnclick.wav");
+        var emeraldSound = new Audio("assets/audio/btnclick2.mp3");
+        var rubySound = new Audio("assets/audio/btnclick3.wav");
+        var blueSound = new Audio("assets/audio/btnclick4.wav");
+
+        $("#ltamethyst").click(e => purpleSound.play());
+        $("#emerald").click(e => emeraldSound.play());
+        $("#ruby").click(e => rubySound.play());
+        $("#zircon").click(e => blueSound.play());
+
+        // ===== IF/ELSE IF STATEMENT TO DETERMINE WHETHER THE USER WINS OR LOSES =====
+        
         if(userScore === ranNumChosen) {
+            
             wins++;
-
             gamePlay();
         } else if (userScore > ranNumChosen) {
             losses++;
@@ -60,7 +74,6 @@ $(document).ready(function() {                  // This will run once the docume
             gamePlay();
         }
     })
-
 }) 
 
 
